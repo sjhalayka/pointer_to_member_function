@@ -6,7 +6,13 @@ typedef int (c::* c_member_function_pointer)(size_t x);
 
 class c
 {
-public:		
+public:
+	void proceed(void)
+	{
+		(this->*(this->ptr))(12345);
+	}
+
+protected:
 	int f(size_t x = 1)
 	{
 		cout << x << endl;
@@ -14,12 +20,6 @@ public:
 	}
 
 	c_member_function_pointer ptr = &c::f;
-
-	void proceed(void)
-	{
-		(this->*(this->ptr))(12345);
-	}
-
 	bool b;
 };
 
