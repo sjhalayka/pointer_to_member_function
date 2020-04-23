@@ -6,8 +6,8 @@ typedef int (c::* c_member_function_pointer)(size_t x);
 
 class c
 {
-public:
-	int f(size_t x = 1234)
+public:		
+	int f(size_t x = 1)
 	{
 		cout << x << endl;
 		return 1;
@@ -26,7 +26,6 @@ public:
 int main(void)
 {
 	c c_instance;
-
 	c_instance.proceed();
 
 	return 0;
