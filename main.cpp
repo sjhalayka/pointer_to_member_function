@@ -2,7 +2,7 @@
 using namespace std;
 
 class c;
-typedef  int (c::* c_member_function)(size_t x);
+typedef int (c::* c_member_function_pointer)(size_t x);
 
 class c
 {
@@ -13,7 +13,7 @@ public:
 		return 1;
 	}
 
-	c_member_function ptr = &c::f;
+	c_member_function_pointer ptr = &c::f;
 
 	void proceed(void)
 	{
