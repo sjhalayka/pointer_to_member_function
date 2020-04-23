@@ -21,7 +21,6 @@ protected:
 	}
 
 	c_member_function_pointer ptr = &c::f;
-	bool b = true;
 	size_t batch_size = 10;
 };
 
